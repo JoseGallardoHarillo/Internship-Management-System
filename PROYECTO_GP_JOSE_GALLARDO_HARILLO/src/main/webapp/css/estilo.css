@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+* {
+  margin: 5; /* Distancia margen izquierdo */
+  padding: 5; /* Distancia puntos y enumeraciones*/
+  box-sizing: border-box;
+  color: rgb(255, 215, 0); /* Amarillo agradable */
+}
+
+/* -------------------------------------CABECERA---------------------------------- */
+
+
+header {
+  background-color: rgb(142, 68, 173); /* Morado suave */
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 4px rgba(44, 44, 44, 0.4); /* sombra negra suave */
+  border: 1px solid rgb(255, 215, 0); /* 💛 Borde dorado */
+  border-radius: 10px; /* opcional: suaviza las esquinas */
+}
+
+#logo {
+  font-size: 3rem;
+  background-color: rgb(75, 0, 130);         /* Morado oscuro */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 215, 0); /* 💛 Borde dorado */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;         /* separación horizontal mayor */
+  background-color: rgb(75, 0, 130);
+  padding: 0.5rem 1rem;
+  margin: 0;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 215, 0); /* 💛 Borde dorado */
+}
+
+header nav ul li {
+  position: relative; /* importante para ubicar el submenú */
+}
+
+/* Estilo enlaces principales */
+
+nav a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Hover sobre enlaces principales */
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* SUBMENÚ oculto por defecto */
+
+nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* justo debajo del li padre */
+  left: 0;
+  background-color: rgb(181, 126, 220);         /* Lavanda claro */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 10;
+}
+
+/* Mostrar submenú al pasar el ratón */
+nav ul li:hover ul.submenu {
+  display: block;
+}
+
+/* Estilo de los elementos del submenú */
+nav ul li ul.submenu li {
+  width: 100%;
+}
+
+nav ul li ul.submenu li a {
+  padding: 0.5rem;
+  color: rgb(245, 230, 99);      /* Amarillo agradable */
+}
+
+nav ul li.log{
+	margin-left: auto;
+}
+
+/* -------------------------------------FOOTER---------------------------------- */
+
+footer {
+  background-color:  rgb(75, 0, 130);      /* Morado suave */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  
+  box-shadow: 0 6px 4px rgba(44, 44, 44, 0.4); /* sombra negra suave */
+  
+  border: 1px solid rgb(255, 215, 0); /* 💛 Borde dorado */
+  border-radius: 10px; /* opcional: suaviza las esquinas */
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+/* -------------------------------------FONDO---------------------------------- */
+
+body {
+  line-height: 1.6;
+  background-image: url('loftyCastle.png');
+  background-size: cover;    /* La imagen cubre todo el fondo sin deformarse */
+  background-repeat: no-repeat; /* No se repite */
+  background-attachment: fixed; /* Efecto “parallax”, el fondo no se mueve */
+  background-position: center;  /* Centra la imagen */
+}
+
+main.typical {
+	border: 1px solid rgb(255, 215, 0);
+	display: block;    /* Selector: 'form' aplica estilos a todos los elementos <form> de tu HTML. */
+	margin: 0 auto; /*Centrado de bloque*/
+    background-color: rgba(128, 0, 128, 0.6); /* 60% opacidad morado de chill*/
+    /* Propiedad: 'background-color' establece el color de fondo del formulario. 'ffffff' es blanco. */
+    padding: 30px;
+    /* Propiedad: 'padding' establece el relleno interior del formulario, creando espacio entre el borde y su contenido. */
+    border-radius: 10px;
+    /* Propiedad: 'border-radius' redondea las esquinas del borde del formulario. '10px' le da un radio de 10 p�xeles. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Propiedad: 'box-shadow' aplica una sombra al formulario. Los valores son: desplazamiento horizontal, desplazamiento vertical, radio de difuminado, color de la sombra (rgba permite transparencia). */
+	width: 80%;
+    /* Propiedad: 'width' establece el ancho del formulario. '100%' significa que ocupar� el 100% del ancho disponible de su contenedor padre (hasta el 'max-width'). */
+    box-sizing: border-box;
+    /* Propiedad: 'box-sizing' con valor 'border-box' asegura que el 'padding' y 'border' se incluyan dentro del ancho y alto total del elemento, facilitando el c�lculo de dimensiones. */
+}
+
+h2 {
+	border: 1px solid rgb(255, 215, 0);
+	display: block;
+    background-color: rgb(128, 0, 128);
+    padding: 30px;
+    /* Propiedad: 'padding' establece el relleno interior del formulario, creando espacio entre el borde y su contenido. */
+    border-radius: 10px;
+    /* Propiedad: 'border-radius' redondea las esquinas del borde del formulario. '10px' le da un radio de 10 p�xeles. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Propiedad: 'box-shadow' aplica una sombra al formulario. Los valores son: desplazamiento horizontal, desplazamiento vertical, radio de difuminado, color de la sombra (rgba permite transparencia). */
+	width: 100%;
+    /* Propiedad: 'width' establece el ancho del formulario. '100%' significa que ocupar� el 100% del ancho disponible de su contenedor padre (hasta el 'max-width'). */
+    box-sizing: border-box;
+    /* Propiedad: 'box-sizing' con valor 'border-box' asegura que el 'padding' y 'border' se incluyan dentro del ancho y alto total del elemento, facilitando el c�lculo de dimensiones. */
+}
+
+/* -------------------------------------FORMULARIO---------------------------------- */
+
+form {
+	/*Centralización*/
+	border: 1px solid rgb(255, 215, 0);
+	margin: 0 auto;
+	display: block;
+    background-color: rgba(128, 0, 128, 0.6); /* 60% opacidad morado*/;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    /* Selector: '.form-group' aplica estilos a todos los elementos con la clase 'form-group'. Se usa para agrupar etiquetas e inputs y darles un espacio consistente. */
+    margin-bottom: 18px;
+    /* Propiedad: 'margin-bottom' establece el margen en la parte inferior del grupo, creando espacio entre grupos de formulario. */
+}
+
+label{
+    /* Selector: 'label' aplica estilos a todos los elementos <label>. */
+    display: block;
+    /* Propiedad: 'display' con valor 'block' hace que cada etiqueta ocupe su propia l�nea completa, apil�ndolas verticalmente. */
+    margin-bottom: 8px;
+    /* Propiedad: 'margin-bottom' establece el margen en la parte inferior de la etiqueta, creando espacio entre la etiqueta y su campo de entrada asociado. */
+    font-weight: bold;
+    /* Propiedad: 'font-weight' establece el grosor de la fuente. 'bold' hace el texto en negrita. */
+    font-size: 0.95em;
+    /* Propiedad: 'font-size' establece el tama�o de la fuente. '0.95em' hace que sea ligeramente m�s peque�a que la fuente base. */
+}
+
+legend {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;              /* Un gris más fuerte */
+  font-size: 1.2em;         /* Más grande que el label */
+  padding: 6px 10px;        /* Añade espacio interno */
+  border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="search"],
+textarea,
+select {
+    
+    width: calc(100% - 20px);
+    color: black;
+    padding: 10px;
+    border: 1px solid rgb(255, 215, 0);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+
+select:focus {
+    border-color: rgb(255, 215, 0);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    
+    margin-right: 8px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+output {
+    /* 'output' aplica estilos al elemento <output>, usado para mostrar el valor de un slider u otro control. */
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: rgb(142, 68, 173);
+    color:  rgb(245, 230, 99);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: rgb(245, 230, 99);
+    color: rgb(142, 68, 173);
+    transform: translateY(-2px);
+}
+
+/* -------------------------------------TABLAS---------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(128, 0, 128, 0.6);
+    color: rgb(255, 215, 0); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 4px 7px;
+    text-align: left;
+    border-bottom: 1px solid rgb(255, 215, 0, 0.3);
+}
+
+th {
+    background-color: rgb(75, 0, 130); 
+    color: rgb(255, 215, 0);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(75, 0, 130, 0.3); 
+}
+
+tr:hover {
+    background-color: rgba(181, 126, 220, 0.5);
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 215, 0);
+}
